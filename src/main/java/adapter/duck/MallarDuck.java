@@ -1,4 +1,4 @@
-package Adapter.Duck;
+package adapter.duck;
 
 public class MallarDuck implements Duck {
     @Override

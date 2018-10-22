@@ -1,4 +1,4 @@
-package Adapter.Duck;
+package adapter.duck;
 
 public class DuckTestDrive {
 
@@ -13,7 +13,7 @@ public class DuckTestDrive {
         wildTurkey.gobble();
         wildTurkey.fly();
 
-        System.out.println("Duck says...");
+        System.out.println("duck says...");
         testDuck(mallarDuck);
 
         System.out.println("TurkeyAdapter says...");

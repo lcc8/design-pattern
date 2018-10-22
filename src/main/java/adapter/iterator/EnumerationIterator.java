@@ -1,4 +1,4 @@
-package Adapter.Iterator;
+package adapter.iterator;
 
 import java.util.Enumeration;
 import java.util.Iterator;
@@ -23,6 +23,6 @@ public class EnumerationIterator implements Iterator {
 
     @Override
     public void remove(){
-
+        throw new UnsupportedOperationException();
     }
 }
