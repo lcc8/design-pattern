@@ -1,13 +1,13 @@
-package state;
+package state.Original;
 
-import static state.State.HAS_QUATER;
-import static state.State.NO_QUARTER;
-import static state.State.SOLD;
-import static state.State.SOLD_OUT;
+import static state.Original.State.HAS_QUATER;
+import static state.Original.State.NO_QUARTER;
+import static state.Original.State.SOLD;
+import static state.Original.State.SOLD_OUT;
 
 public class GumballMachine {
     private State state = SOLD_OUT;
-    private int count = 0;
+    private int count;
 
     public GumballMachine(int count) {
         this.count = count;

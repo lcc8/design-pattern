@@ -1,5 +1,7 @@
 package composite;
 
+import java.util.Iterator;
+
 public abstract class MenuComponent {
     public String getName() {
         throw new UnsupportedOperationException();
@@ -30,6 +32,10 @@ public abstract class MenuComponent {
     }
 
     public MenuComponent getChild(int index) {
+        throw new UnsupportedOperationException();
+    }
+
+    public Iterator createIterator(){
         throw new UnsupportedOperationException();
     }
 }

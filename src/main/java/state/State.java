@@ -1,4 +1,8 @@
-package state.Original;
+package state;
 
-public interface State1 {
+public interface State {
+    void insertQuarter();
+    void ejectQuater();
+    void turnCrank();
+    void dispense();
 }

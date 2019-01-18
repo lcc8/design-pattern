@@ -1,4 +1,4 @@
-package state;
+package state.Original;
 
 public class GumballMachineTestDriver {
     public static void main(String[] args) {

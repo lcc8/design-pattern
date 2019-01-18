@@ -1,4 +1,4 @@
-package state;
+package state.Original;
 
 public enum State {
     SOLD_OUT,

@@ -1,31 +1,39 @@
 package state;
 
-public class NoQuarterState implements State {
+import static state.Original.State.NO_QUARTER;
+import static state.Original.State.SOLD_OUT;
+
+public class SoldState implements State {
 
     private GumballMachine gumballMachine;
 
-    public NoQuarterState(GumballMachine gumballMachine) {
+    public SoldState(GumballMachine gumballMachine) {
         this.gumballMachine = gumballMachine;
     }
 
     @Override
     public void insertQuarter() {
-        System.out.println("You insert a quarter");
-        gumballMachine.setState(gumballMachine.getHasQuarterState());
+        System.out.println("Please wait, we're already giving you a gumball");
     }
 
     @Override
     public void ejectQuater() {
-        System.out.println("You haven't inserted a quarter");
+        System.out.println("Sorry, you already turned the crank");
     }
 
     @Override
     public void turnCrank() {
-        System.out.println("You turned but there's no quarter");
+        System.out.println("Turning twice doesn't get you another gumball!");
     }
 
     @Override
     public void dispense() {
-        System.out.println("You need to pay first");
+        gumballMachine.releaseBall();
+        if(gumballMachine.getCount() > 0){
+            gumballMachine.setState(gumballMachine.getNoQuarterState());
+        }else{
+            System.out.println("Opps, out of gumball.");
+            gumballMachine.setState(gumballMachine.getSoldOutState());
+        }
     }
 }
