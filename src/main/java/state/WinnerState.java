@@ -41,7 +41,7 @@ public class WinnerState implements State {
     }
 
     @Override
-    public void refill(int count) {
+    public void refill() {
         System.out.println("still ball, can't refill");
     }
 }

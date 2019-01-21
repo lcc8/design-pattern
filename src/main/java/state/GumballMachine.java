@@ -35,7 +35,9 @@ public class GumballMachine {
     }
 
     public void reFill(int count){
-        state.refill(count);
+        System.out.println("Refill " + count + " balls");
+        this.count += count;
+        state.refill();
     }
 
     public void turnCrank(){
@@ -76,10 +78,6 @@ public class GumballMachine {
 
     public int getCount() {
         return count;
-    }
-
-    public void setCount(int count){
-        this.count = count;
     }
 
     @Override

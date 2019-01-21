@@ -29,9 +29,7 @@ public class SoldoutState implements State {
     }
 
     @Override
-    public void refill(int count) {
-        System.out.println("Refill " + count + " balls");
-        gumballMachine.setCount(count);
+    public void refill() {
         gumballMachine.setState(gumballMachine.getNoQuarterState());
     }
 }

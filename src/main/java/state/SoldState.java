@@ -35,7 +35,7 @@ public class SoldState implements State {
     }
 
     @Override
-    public void refill(int count) {
+    public void refill() {
         System.out.println("Cannot refill. not sold out yet");
     }
 }
