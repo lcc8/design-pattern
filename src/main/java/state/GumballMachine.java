@@ -13,8 +13,9 @@ public class GumballMachine {
     public GumballMachine(int numberOfGum) {
         noQuarterState = new NoQuarterState(this);
         hasQuarterState = new HasQuarterState(this);
-        soldOutState = new SoldState(this);
+        soldOutState = new SoldoutState(this);
         soldState = new SoldState(this);
+        winnerState = new WinnerState(this);
 
         this.count = numberOfGum;
 
@@ -31,6 +32,10 @@ public class GumballMachine {
 
     public void ejectQuarter(){
         state.ejectQuater();
+    }
+
+    public void reFill(int count){
+        state.refill(count);
     }
 
     public void turnCrank(){
@@ -71,6 +76,10 @@ public class GumballMachine {
 
     public int getCount() {
         return count;
+    }
+
+    public void setCount(int count){
+        this.count = count;
     }
 
     @Override

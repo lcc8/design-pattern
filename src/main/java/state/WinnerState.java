@@ -1,8 +1,5 @@
 package state;
 
-import com.sun.org.apache.xpath.internal.operations.Gt;
-import state.State;
-
 public class WinnerState implements State {
     private GumballMachine gumballMachine;
 
@@ -41,5 +38,10 @@ public class WinnerState implements State {
                 gumballMachine.setState(gumballMachine.getSoldOutState());
             }
         }
+    }
+
+    @Override
+    public void refill(int count) {
+        System.out.println("still ball, can't refill");
     }
 }

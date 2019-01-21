@@ -38,4 +38,9 @@ public class HasQuarterState implements State {
     public void dispense() {
         System.out.println("No gumball dispensed");
     }
+
+    @Override
+    public void refill(int count) {
+        System.out.println("Still gumball, cannot refill");
+    }
 }

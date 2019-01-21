@@ -1,8 +1,5 @@
 package state;
 
-import static state.Original.State.NO_QUARTER;
-import static state.Original.State.SOLD_OUT;
-
 public class SoldState implements State {
 
     private GumballMachine gumballMachine;
@@ -35,5 +32,10 @@ public class SoldState implements State {
             System.out.println("Opps, out of gumball.");
             gumballMachine.setState(gumballMachine.getSoldOutState());
         }
+    }
+
+    @Override
+    public void refill(int count) {
+        System.out.println("Cannot refill. not sold out yet");
     }
 }
