@@ -46,7 +46,7 @@ public class RemoteInvokerWithUndo {
 
     public String toString() {
         StringBuffer stringBuffer = new StringBuffer();
-        stringBuffer.append("\n ----- Remote Control ------ \n");
+        stringBuffer.append("\n ----- remote Control ------ \n");
         for (int i = 0; i < onCommands.length; i++) {
             if (!(onCommands[i] instanceof NoCommand)) {
                 stringBuffer.append("[slot " + i + "] " + onCommands[i].getClass().getName() + "      " + offCommands[i].getClass()

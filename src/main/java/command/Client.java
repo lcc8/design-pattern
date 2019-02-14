@@ -29,7 +29,7 @@ public class Client {
 //        remote.setCommand(garageDoorOpenCommand);
 //        remote.buttonWasPressed();
 
-        // Remote way
+        // remote way
         RemoteInvokerWithUndo remoteInvokerWithUndo = new RemoteInvokerWithUndo();
 
         Light livingRoomLight = new Light("Living Room");

@@ -1,54 +1,22 @@
 package proxy.gumballmachine;
 
+import proxy.gumballmonitor.GumballMonitor;
+
 public class GumballMachineTestDrive {
 
     public static void main(String[] args) {
-        GumballMachine gumballMachine = new GumballMachine(5);
+        int count = 0;
 
-        System.out.println(gumballMachine);
+        if(args.length < 2){
+            System.out.println("GumballMachine <name> <inventory>");
+            System.exit(1);
+        }
 
-        gumballMachine.insertQuarter();
-        gumballMachine.turnCrank();
+        count = Integer.parseInt(args[1]);
+        GumballMachine gumballMachine = new GumballMachine(args[0], count);
 
-        System.out.println(gumballMachine);
+        GumballMonitor gumballMonitor = new GumballMonitor(gumballMachine);
 
-        gumballMachine.insertQuarter();
-        gumballMachine.turnCrank();
-        gumballMachine.insertQuarter();
-        gumballMachine.turnCrank();
-
-        System.out.println(gumballMachine);
-
-        gumballMachine.insertQuarter();
-        gumballMachine.turnCrank();
-        gumballMachine.insertQuarter();
-        gumballMachine.turnCrank();
-
-        System.out.println(gumballMachine);
-
-        gumballMachine.reFill(5);
-
-        System.out.println(gumballMachine);
-
-        gumballMachine.insertQuarter();
-        gumballMachine.turnCrank();
-        gumballMachine.reFill(5);
-
-        System.out.println(gumballMachine);
-
-        gumballMachine.insertQuarter();
-        gumballMachine.turnCrank();
-        gumballMachine.insertQuarter();
-        gumballMachine.turnCrank();
-
-        System.out.println(gumballMachine);
-
-        gumballMachine.insertQuarter();
-        gumballMachine.turnCrank();
-        gumballMachine.insertQuarter();
-        gumballMachine.turnCrank();
-
-        System.out.println(gumballMachine);
-
+        gumballMonitor.report();
     }
 }
