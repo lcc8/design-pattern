@@ -1,6 +1,8 @@
 package proxy.gumballmachine;
 
-public interface State {
+import java.io.Serializable;
+
+public interface State extends Serializable {
     void insertQuarter();
     void ejectQuater();
     void turnCrank();

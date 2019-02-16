@@ -1,7 +1,9 @@
 package proxy.gumballmachine;
 
 public class WinnerState implements State {
-    private GumballMachine gumballMachine;
+    private static final long serialVersionUID = 2L;
+
+    private transient GumballMachine gumballMachine;
 
     public WinnerState(GumballMachine gumballMachine) {
         this.gumballMachine = gumballMachine;

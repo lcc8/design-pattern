@@ -3,8 +3,9 @@ package proxy.gumballmachine;
 import java.util.Random;
 
 public class HasQuarterState implements State {
+    private static final long serialVersionUID = 2L;
 
-    private GumballMachine gumballMachine;
+    private transient GumballMachine gumballMachine;
     Random randomWinner = new Random(System.currentTimeMillis());
 
     public HasQuarterState(GumballMachine gumballMachine) {
