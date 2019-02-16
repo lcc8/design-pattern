@@ -1,4 +1,4 @@
-package proxy.gumballmachine;
+package proxy.remoteproxy.gumballmachine;
 
 import java.net.MalformedURLException;
 import java.rmi.Naming;

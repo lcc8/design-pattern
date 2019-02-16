@@ -1,4 +1,4 @@
-package proxy.gumballmachine;
+package proxy.remoteproxy.gumballmachine;
 
 public class SoldState implements State {
     private static final long serialVersionUID = 2L;

@@ -1,4 +1,4 @@
-package proxy.gumballmachine;
+package proxy.remoteproxy.gumballmachine;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;

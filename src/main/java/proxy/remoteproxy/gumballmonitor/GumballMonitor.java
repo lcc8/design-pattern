@@ -1,7 +1,7 @@
-package proxy.gumballmonitor;
+package proxy.remoteproxy.gumballmonitor;
 
-import proxy.gumballmachine.GumballMachine;
-import proxy.gumballmachine.GumballMachineRemote;
+import proxy.remoteproxy.gumballmachine.GumballMachine;
+import proxy.remoteproxy.gumballmachine.GumballMachineRemote;
 
 import java.rmi.RemoteException;
 

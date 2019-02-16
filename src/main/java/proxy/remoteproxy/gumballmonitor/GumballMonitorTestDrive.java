@@ -1,6 +1,6 @@
-package proxy.gumballmonitor;
+package proxy.remoteproxy.gumballmonitor;
 
-import proxy.gumballmachine.GumballMachineRemote;
+import proxy.remoteproxy.gumballmachine.GumballMachineRemote;
 
 import java.net.MalformedURLException;
 import java.rmi.Naming;
