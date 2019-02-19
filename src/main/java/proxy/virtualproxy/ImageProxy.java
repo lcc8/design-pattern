@@ -53,4 +53,24 @@ public class ImageProxy implements Icon {
     synchronized void setImageIcon(ImageIcon imageIcon){
         this.imageIcon = imageIcon;
     }
+
+    public URL getImageURL() {
+        return imageURL;
+    }
+
+    public boolean isRetrieving() {
+        return retrieving;
+    }
+
+    public void setRetrieving(boolean retrieving) {
+        this.retrieving = retrieving;
+    }
+
+    public Thread getRetrievalThread() {
+        return retrievalThread;
+    }
+
+    public void setRetrievalThread(Thread retrievalThread) {
+        this.retrievalThread = retrievalThread;
+    }
 }
